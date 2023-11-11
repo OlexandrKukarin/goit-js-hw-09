@@ -10,14 +10,14 @@ elements.btnStop.addEventListener('click', handleStop);
 
 function handleStart(e) {
   elements.btnStart.disabled = true;
-  timerId = setInterval(() => {
+  elements.timerId = setInterval(() => {
     const color = getRandomHexColor();
     elements.colorBody.style.backgroundColor = `${color}`;
   }, 1000);
 }
 
 function handleStop(e) {
-  clearInterval(timerId);
+  clearInterval(elements.timerId);
   elements.btnStart.disabled = false;
 }
 
